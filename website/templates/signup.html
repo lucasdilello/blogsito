@@ -1,10 +1,49 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "base.html" %}
+{% block title %}Registrarse{% endblock %}
+{% block content%}
+<form method="POST">
+    <h3 align="center">Acceder</h3>
+    <div class="form-group">
+        <label for="email">Direccion de email</label>
+        <input
+                type="text"
+                id="email"
+                name="email"
+                class="form-control"
+                placeholder="Enter Email"
+        />
 
-</body>
-</html>
+        <label for="username">Nombre de usuario</label>
+        <input
+                type="text"
+                id="username"
+                name="username"
+                class="form-control"
+                placeholder="Escribe el nombre de usuario"
+        />
+
+        <label for="password">Contrasena</label>
+        <input
+                type="password"
+                id="password"
+                name="password"
+                class="form-control"
+                placeholder="Enter password"
+        />
+
+        <label for="password2">Contrasena</label>
+        <input
+                type="password"
+                id="password2"
+                name="password"
+                class="form-control"
+                placeholder="Enter password"
+        />
+
+        <br/>
+        <div align="center">
+            <button class="btn btn-primary" type="submit">Acceder</button>
+        </div>
+    </div>
+</form>
+{% endblock %}%}
